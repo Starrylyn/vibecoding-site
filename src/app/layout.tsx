@@ -49,6 +49,25 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Blog',
+              name: 'Vibecoding 实践分享',
+              description:
+                '探索用自然语言与 AI 对话式编程的艺术——从工具链选择到实战复盘，记录代码如何开始呼吸。',
+              url: 'https://vibecoding-site-eta.vercel.app',
+              inLanguage: 'zh-CN',
+              author: {
+                '@type': 'Person',
+                name: 'Vibecoding 实践者',
+              },
+              license: 'https://creativecommons.org/licenses/by-sa/4.0/',
+            }),
+          }}
+        />
       </head>
       <body className="sketch-grid-bg">
         {children}
